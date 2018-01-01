@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace CS_Life_Console_v5
 {
-  public sealed class GameOfLife : IDisposable
-  {
+   public sealed class GameOfLife : IDisposable
+   {
     // member private const fields
     private const int _LIFE_SIZE = _XSIZE * _YSIZE;
     private const int _MASK = _LIFE_SIZE - 1;
@@ -47,7 +47,7 @@ namespace CS_Life_Console_v5
 
     private byte[] _lastMap = new byte[_LIFE_SIZE];
     private byte[] _swapMap = new byte[_LIFE_SIZE];
-    private byte[] _testMap = new byte[_LIFE_SIZE];
+    private readonly byte[] _testMap = new byte[_LIFE_SIZE];
     private byte[] _workMap = new byte[_LIFE_SIZE];
 
     // private mutable
@@ -203,8 +203,6 @@ namespace CS_Life_Console_v5
           break;
 
         case LMode.AUTO:
-          break;
-
         case LMode.EXIT:
           break;
 
